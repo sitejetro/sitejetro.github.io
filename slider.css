@@ -1,0 +1,161 @@
+.slider {
+    width: 940px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider input {
+    display: none;
+}
+
+.slides {
+    background: #ffffff;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.inner {
+    width: 600%;
+}
+
+.page {
+    position: relative;
+    float: left;
+    width: 16.66667%;
+}
+
+.page:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+.ticket {
+    position: absolute;
+    top: 245px;
+    left: 37px;
+    width: 380px;
+	height: 95px;
+    background-color: rgba(232, 102, 60, 0.8);
+    padding: 15px 15px 15px 20px;
+}
+
+.ticket .title {
+    font-family: "BebasRegular";
+    font-size: 23px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.ticket p {
+    font-family: "HelveticaNeue";
+    font-size: 12px;
+    color: white;
+    margin: 0;
+}
+
+.page img {
+    width: 940px;
+    height: 400px;
+}
+
+#controls label {
+    display: none;
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+#slide1:checked ~ #controls label:nth-child(2),
+#slide2:checked ~ #controls label:nth-child(3),
+#slide3:checked ~ #controls label:nth-child(4),
+#slide4:checked ~ #controls label:nth-child(5),
+#slide5:checked ~ #controls label:nth-child(6),
+#slide6:checked ~ #controls label:nth-child(1) {
+    width: 36px;
+    height: 52px;
+    background-image: url(image/sprait.png);
+    background-position: -36px, 0;
+    display: block;
+    position: absolute;
+    top: 155px;
+    right: 25px;
+}
+
+#slide1:checked ~ #controls label:nth-child(6),
+#slide2:checked ~ #controls label:nth-child(1),
+#slide3:checked ~ #controls label:nth-child(2),
+#slide4:checked ~ #controls label:nth-child(3),
+#slide5:checked ~ #controls label:nth-child(4),
+#slide6:checked ~ #controls label:nth-child(5){
+    width: 36px;
+    height: 52px;
+    background-image: url(image/sprait.png);
+    background-position: 0, 0;
+    display: block;
+    position: absolute;
+    top: 155px;
+    left: 25px;
+}
+
+#controls label {
+    display: none;
+    opacity: 0.85;
+    cursor: pointer;
+}
+
+#controls label:hover {
+    opacity: 0.95;
+}
+
+#slide1:checked ~ .slides .inner {margin-left: 0;}
+#slide2:checked ~ .slides .inner {margin-left: -100%;}
+#slide3:checked ~ .slides .inner {margin-left: -200%;}
+#slide4:checked ~ .slides .inner {margin-left: -300%;}
+#slide5:checked ~ .slides .inner {margin-left: -400%;}
+#slide6:checked ~ .slides .inner {margin-left: -500%;}
+
+#active label {
+    width: 140px;
+    height: 120px;
+    background-image: url(image/sprait1.png);
+    background-color: #e8603c;
+    opacity: 0.85;
+    display: inline-block;
+    margin: 20px 16px 20px 0;
+    cursor: pointer;
+}
+
+#active label:last-child {
+    margin: 20px 0;
+}
+
+#active label:hover {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(0, 0, 0,0.5);
+}
+
+.label1 {background-position: 0, 0;}
+.label2 {background-position: -140px, 0;}
+.label3 {background-position: -280px, 0;}
+.label4 {background-position: -420px, 0;}
+.label5 {background-position: -560px, 0;}
+.label6 {background-position: -700px, 0;}
+
+#slide1:checked ~ #active label:nth-child(1),
+#slide2:checked ~ #active label:nth-child(2),
+#slide3:checked ~ #active label:nth-child(3),
+#slide4:checked ~ #active label:nth-child(4),
+#slide5:checked ~ #active label:nth-child(5),
+#slide6:checked ~ #active label:nth-child(6) {
+    opacity: 1;
+    width: 132px;
+    height: 112px;
+    border: solid 4px #e8603c;
+}
+
+.slides .inner {
+    transition: all 0.8s ease-in-out;
+}
+
